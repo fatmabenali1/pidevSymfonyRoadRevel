@@ -28,9 +28,10 @@
                 <td>{{ produit.typeProd }}</td>
                 <td>{{ produit.priceProd }}</td>
                 <td>{{ produit.quantite }}</td>
-                <td>{{ produit.imageProd }}</td>
+						<td><img src="{{ asset('/uploads' ~ produit.imageProd) }}" style="width: 50%; height: auto;"></td>
                 <td>{{ produit.status }}</td>
                 <td>
+
                     <a href="{{ path('app_produit_show', {'idProduit': produit.idProduit}) }}">show</a>
                     <a href="{{ path('app_produit_edit', {'idProduit': produit.idProduit}) }}">edit</a>
                 </td>
